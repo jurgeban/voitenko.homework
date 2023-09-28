@@ -18,5 +18,11 @@ public class Task1 {
         System.out.println("myDouble = " + myDouble);
         System.out.println("myLong = " + myLong);
 
+        System.out.println("Hello: " + (34578 % 100000 / 10000));
+        System.out.println("Hello: " + (34578 % 10000 / 1000));
+        System.out.println("Hello: " + (34578 % 1000 / 100));
+        System.out.println("Hello: " + (34578 % 100 / 10));
+        System.out.println("Hello: " + (34578 % 10));
+
     }
 }

@@ -1,20 +1,61 @@
 package de.telran.homework1;
 
+import java.util.Scanner;
+
 public class Task2 {
     public static void main(String[] args) {
-         int num = 345;
 
-       if (num < 100 || num > 999) {
-           System.out.println("Переменная \"num\" должна быть трёхзначным числом");
-       } else {
-           int rest10= num % 10;
-           int rest100 = num % 100;
-           int rest1000 = num % 1000;
+        Scanner scanner = new Scanner(System.in);
 
-           System.out.print("Число " + num + " -> ");
-           System.out.print((rest1000 - rest100) / 100);
-           System.out.print(", " + (rest100 - rest10) / 10);
-           System.out.print(", " + rest10);
-       }
+        String balance = "";
+        String minus = "";                           // --- in case if we have negative number
+        boolean isLetter = true;
+        while (isLetter) { //--------------------start While
+
+            System.out.println("Введите целое число до 10 знаков положительное или отрицательное: ");
+            String firstStr = scanner.next();        // --- get data as a string
+               minus = "";
+            if (firstStr.charAt(0) == '-' ) {        // --- check if the first letter is minus
+                String str = firstStr.substring(1);
+                if (!str.contains("-")) {            // ---- check if in other part of string isn't any minus more - to get possibility of a negative number
+                    minus = "-";                     // ----------------- save minus for future
+                    firstStr = str;
+                }
+            }
+           //-------------------
+            balance = "";
+            String[] numbers = firstStr.split("[^0-9]");        //----- get rid of all symbols except digits
+
+            for (int i = 0; i < numbers.length; i++) {                // ------ replace array in string
+                balance += numbers[i];
+            }
+
+            if (balance.length() > 0 && firstStr.length() == balance.length() && balance.length() <= 9) {
+                isLetter = false;          //-------- if everything ok - exit While
+            } else {
+                if (balance.length() > 0 && firstStr.length() == balance.length() && balance.length() <= 9) {
+                    System.out.print("Вы ввели число, но оно превышает 9 знаков. Попробуйте еще раз. ");
+                } else {
+                    if (balance.length() > 0 && firstStr.length() > balance.length()) {
+                        System.out.print("Помимо цыфр Вы также ввели другие знаки. Попробуйте еще раз. ");
+                    } else {
+                        if (balance.length() == 0 && firstStr.length() > 0) {
+                            System.out.print("Вы не ввели ни одной цыфры. Попробуйте еще раз. ");
+                        }
+                    }
+                }
+            }
+        } // ------------------------------end while
+
+        System.out.print("Число "  + minus + balance + " -> ");         //----- output the main number
+
+        for (int i = 0; i < balance.length(); i++) {                    // ---- output all digits in turn
+               if (balance.charAt(i) == '0') {                          // ---- digit 0 can't be negative
+                   System.out.print(balance.charAt(i) + ", ");
+               } else {
+                   System.out.print(minus + balance.charAt(i) + ", ");
+               }
+        }
+
     }
 }
