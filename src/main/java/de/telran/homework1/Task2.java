@@ -56,6 +56,5 @@ public class Task2 {
                    System.out.print(minus + balance.charAt(i) + ", ");
                }
         }
-
     }
 }
