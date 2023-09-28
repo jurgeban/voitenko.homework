@@ -33,7 +33,7 @@ public class Task2 {
             if (balance.length() > 0 && firstStr.length() == balance.length() && balance.length() <= 9) {
                 isLetter = false;          //-------- if everything ok - exit While
             } else {
-                if (balance.length() > 0 && firstStr.length() == balance.length() && balance.length() <= 9) {
+                if (balance.length() > 0 && firstStr.length() == balance.length() && balance.length() > 9) {
                     System.out.print("Вы ввели число, но оно превышает 9 знаков. Попробуйте еще раз. ");
                 } else {
                     if (balance.length() > 0 && firstStr.length() > balance.length()) {
