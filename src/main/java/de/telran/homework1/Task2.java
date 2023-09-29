@@ -51,9 +51,17 @@ public class Task2 {
 
         for (int i = 0; i < balance.length(); i++) {                    // ---- output all digits in turn
                if (balance.charAt(i) == '0') {                          // ---- digit 0 can't be negative
-                   System.out.print(balance.charAt(i) + ", ");
+                   if (i == balance.length()-1) {
+                       System.out.print(balance.charAt(i));             // ----- output without comma
+                   } else {
+                       System.out.print(balance.charAt(i) + ", ");
+                   }
                } else {
-                   System.out.print(minus + balance.charAt(i) + ", ");
+                   if (i == balance.length()-1) {
+                       System.out.print(minus + balance.charAt(i));        // ----- output without comma
+                   } else {
+                       System.out.print(minus + balance.charAt(i) + ", ");
+                   }
                }
         }
     }
