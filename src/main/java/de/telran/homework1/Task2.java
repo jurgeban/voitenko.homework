@@ -13,7 +13,7 @@ public class Task2 {
         while (isLetter) { //--------------------start While
 
             System.out.println("Введите целое число до 10 знаков положительное или отрицательное: ");
-            String firstStr = scanner.next();        // --- get data as a string
+            String firstStr = scanner.nextLine();        // --- get data as a string
                minus = "";
             if (firstStr.charAt(0) == '-' ) {        // --- check if the first letter is minus
                 String str = firstStr.substring(1);
