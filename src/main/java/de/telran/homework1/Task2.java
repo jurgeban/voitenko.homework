@@ -47,6 +47,7 @@ public class Task2 {
             }
         } // ------------------------------end while
 
+
         System.out.print("Число "  + minus + balance + " -> ");         //----- output the main number
 
         for (int i = 0; i < balance.length(); i++) {                    // ---- output all digits in turn
