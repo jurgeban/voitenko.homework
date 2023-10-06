@@ -12,7 +12,6 @@ public class Task1 {
     }
     public static String convertNumbers(long num1, int currentSystem, int systemTo) {
         long number = Long.parseLong(num1+"", currentSystem);
-        String numberOutStr = Long.toString(number, systemTo);
-        return numberOutStr;
+        return Long.toString(number, systemTo);
     }
 }
