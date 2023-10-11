@@ -16,7 +16,7 @@ public class Task2 {
     static String getHour(int num1, int num2) {
         int res = num1 / num2;
         if(res == 0) {
-           return "Осталось менее часа";
+           return "Осталось менее часа";                    // 0
         } else if (res == 1) {
            return "Остался " + res + " час";                // 1
         } else if (res > 1 && res < 5) {
