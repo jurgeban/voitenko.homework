@@ -18,7 +18,7 @@ public class Task2 {
         if(res == 0) {
            return "Осталось менее часа";
         } else if (res == 1) {
-           return "Остался " + res + " час";    // 1
+           return "Остался " + res + " час";                // 1
         } else if (res > 1 && res < 5) {
             return "Осталось " + res + " часа";             // 2,3,4
         } else {
