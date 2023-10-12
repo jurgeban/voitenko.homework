@@ -7,7 +7,6 @@ public class Task1 {
         String edeka = "Edeka", rewe = "Rewe";
         boolean isEdekaOpen = askIfOpen(edeka), isReweOpen = askIfOpen(rewe);
 
-
         if (canBuy(isEdekaOpen, isReweOpen)) {
             System.out.println("Я могу купить еду, потому что как минимум один магазин открыт");
         } else {
