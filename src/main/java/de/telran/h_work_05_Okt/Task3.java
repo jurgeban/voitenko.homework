@@ -13,7 +13,8 @@ public class Task3 {
           System.out.println("Ваша сумма: " + euro + " €, будет сконвертирована в долларовую сумму: " + dollarSum + " $");
     }
     public static double convert(double euroSum) {
-        double currentExchangeCurs = 1.10;
+        double currentExchangeCurs = 1.1;
+        System.out.println("Zeigen = " + currentExchangeCurs);
         DecimalFormat round = new DecimalFormat("0.0");
         return Double.parseDouble(round.format(euroSum * currentExchangeCurs));
     }
